@@ -1,0 +1,42 @@
+import React from 'react';
+import {createAppContainer} from 'react-navigation';
+import {createDrawerNavigator} from 'react-navigation-drawer'
+import {Dimensions} from 'react-native'
+
+import {Feather} from '@expo/vector-icons'
+import {ProfileScreen, MessageScreen, ActivityScreen, ListScreen, ReportScreen, StatisticScreen, SignOutScreen}  from "./screens";
+
+import SideBar from './components/SideBar';
+
+
+const DrawerNavigator = createDrawerNavigator({
+  ProfileScreen: {
+      screen: ProfileScreen,
+      navigationOptions: {
+          title : "Profile",
+          drawerIcon: ({ tintColor }) => <Feather name="user" size={16} color={tintColor} />
+      }
+  },
+  MessageScreen: {
+
+     screen: MessageScreen,
+     navigationOptions: {
+         title: "Message",
+         drawerIcon : ({ tintColor}) => <Feather name=    />
+     }
+  },
+    ActivityScreen,
+    ListScreen,
+    ReportScreen,
+    StatisticScreen,
+    SignOutScreen
+
+},
+  {
+      contentComponent: props => <SideBar {...props}  />
+  }
+
+)
+
+
+export default createAppContainer(DrawerNavigator);
