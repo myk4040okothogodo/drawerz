@@ -7,7 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 export default SideBar = props => (
     <ScrollView>
       <ImageBackground
-          source = { require("../assets/background.png")}
+          source = { require("../assets/background.webp")}
           style = {{ width: undefined, padding: 16, paddingTop: 48}}
        >
           <Image source={require("../assets/profile-pic.jpg")}  style={styles.profile}  />
